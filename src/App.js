@@ -5,13 +5,6 @@ import axios from 'axios'
 
 function App() {
   
-  function returnFoo(i) {
-    var g = i+6;
-    return g
- }
-
-
-
   const [orderNumber, setOrderNumber] = useState("");
   const [date, setDate] = useState("");
   const [dasher, setDasher] = useState("");
@@ -48,14 +41,8 @@ function App() {
            
             for(var i=0;i<tab.length;i++){
               if(tab[i].children[7].innerText!="$0.00"){
-                console.log("found");
                 tab[i].style['background-color']="red";
                 
-  
-                const orderNumber = tab[i].children[0].innerText;
-                
-                
-                handleSubmit()
 
               }
             }
