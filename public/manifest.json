@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name":"Jason",
-  "description": "desc",
-  "version": "0.0.1",
+  "name":"HSE Webscrapper App",
+  "description": "Made by Jason Hua for HSE 2022 Final Project",
+  "version": "1.6.9",
   "action": {
     "default_popup": "index.html",
     "default_title": "Open"
