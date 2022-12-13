@@ -70,8 +70,8 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={test}>Find it</button>
-      <button onClick={handleSubmit}>Write to Sheets</button>
+      <button onClick={test}>Search</button>
+      <button onClick={handleSubmit}>Paste</button>
 
     </div>
   );
