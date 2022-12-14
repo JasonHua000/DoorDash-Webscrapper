@@ -5,11 +5,15 @@ import axios from 'axios'
 
 function App() {
   
+  // local storage for the variables
+  
   const [orderNumber, setOrderNumber] = useState("");
   const [date, setDate] = useState("");
   const [dasher, setDasher] = useState("");
   const [cost, setCost] = useState("");
 
+  // when button is clicked, post information to the sheet.best api
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -27,7 +31,6 @@ function App() {
 
 
   function test(){
-    /* eslint-disable no-undef */
     chrome.tabs.query({active: true, currentWindow:true}, tabs=>{
       const activeTabId = tabs[0].id;
       
@@ -36,11 +39,16 @@ function App() {
           target: {tabId: activeTabId},
           function: ()=>{
            
+            // get into the class that stores the all information about each order
+            
             var tab= document.getElementsByClassName("styles__BodyRow-sc-4myuz0-3 cnRgPY");
             var list=[];
            
+            // for loop to find the "error charge" column for each class 
+            
             for(var i=0;i<tab.length;i++){
               if(tab[i].children[7].innerText!="$0.00"){
+                // highlights the class red
                 tab[i].style['background-color']="red";
                 
 
@@ -57,6 +65,7 @@ function App() {
 
   return (
     <div className="App">
+    // buttons that can be pressed
       <button onClick={test}>Search</button>
       <button onClick={handleSubmit}>Paste</button>
 
